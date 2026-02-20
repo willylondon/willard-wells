@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<article class="article-content">
+    <header class="article-header">
+        <h1 class="article-title">{{ page.title }}</h1>
+        <div class="post-meta" style="margin-bottom: 0;">
+            <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+            {% if page.categories.size > 0 %}
+            <span class="post-category">{{ page.categories | first }}</span>
+            {% endif %}
+        </div>
+    </header>
+
+    {{ content }}
+</article>

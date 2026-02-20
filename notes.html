@@ -1,0 +1,25 @@
+---
+layout: default
+title: Notes
+---
+
+<div class="article-header">
+    <h1 class="article-title">Notes & Essays</h1>
+    <p style="color: var(--text-muted); font-size: 1.125rem;">A collection of my thoughts, organized chronologically.
+    </p>
+</div>
+
+<ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-item">
+        <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+            {% if post.categories.size > 0 %}
+            <span class="post-category">{{ post.categories | first }}</span>
+            {% endif %}
+        </div>
+        <h3 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    </li>
+    {% endfor %}
+</ul>

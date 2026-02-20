@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="hero">
+    <h1>Hi, I'm Willard Wells 👋</h1>
+    <p>Welcome to my digital garden 🌱. A space where I share my thoughts, document projects, and write about life,
+        tech, and everything in between.</p>
+</div>
+
+<h2>Recent Notes</h2>
+{% for post in site.posts limit:5 %}
+{{ post.date | date: "%B %-d, %Y" }} {% if post.categories.size > 0 %} {{ post.categories | first }} {% endif %}
+{{ post.title }}
+{{ post.excerpt | strip_html | truncatewords: 30 }}
+
+{% endfor %}

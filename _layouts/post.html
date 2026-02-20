@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% assign words = content | number_of_words %}
+{% if words < 360 %} {% assign readtime="1 min read" %} {% else %} {% assign readtime=words | divided_by: 180 |
+    append: " mins read" %} {% endif %} <article class="article-content" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    <header class="article-header">
+        <h1 class="article-title" itemprop="name headline">{{ page.title }}</h1>
+        <div class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d,
+                %Y" }}</time>
+            <span aria-hidden="true">&middot;</span>
+            <span>{{ readtime }}</span>
+            {% if page.categories.size > 0 %}
+            <span aria-hidden="true">&middot;</span>
+            <span class="post-category">{{ page.categories | first }}</span>
+            {% endif %}
+        </div>
+    </header>
+
+    <div itemprop="articleBody">
+        {{ content }}
+    </div>
+    </article>
