@@ -1,0 +1,15 @@
+{
+  "name": "rsc-cache-audit",
+  "version": "0.1.0",
+  "description": "Proposed skill for React Server Components cache boundary and invalidation auditing.",
+  "triggerRules": ["RSC", "server components", "revalidate", "cache boundaries"],
+  "supportedFrameworks": ["Next.js", "React"],
+  "requiredTools": ["Static analyzer", "Playwright"],
+  "permissions": ["read-only scan", "approval-gated fixes"],
+  "commands": ["npm run audit:rsc"],
+  "parsers": ["route graph parser"],
+  "reportTemplates": ["rsc-audit-report"],
+  "fixTemplates": ["cache boundary", "fetch dedupe", "revalidation hints"],
+  "tests": ["sample clean repo", "stale cache repo", "broken fetch cache"],
+  "status": "proposed"
+}

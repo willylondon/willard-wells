@@ -1,0 +1,22 @@
+{
+  "name": "the-auditor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "audit:dry-run": "node scripts/audit-dry-run.js",
+    "skills:validate": "node scripts/validate-registry.js",
+    "worker": "node scripts/worker.js"
+  },
+  "dependencies": {
+    "next": "^15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.0"
+  }
+}

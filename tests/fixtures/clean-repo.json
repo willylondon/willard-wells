@@ -1,0 +1,6 @@
+{
+  "name": "sample-clean-repo",
+  "findings": 0,
+  "expectedFindings": 0,
+  "notes": "Used to confirm false positive rate stays near zero."
+}

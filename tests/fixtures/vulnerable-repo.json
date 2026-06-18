@@ -1,0 +1,6 @@
+{
+  "name": "sample-vulnerable-repo",
+  "findings": 3,
+  "expectedFindings": 3,
+  "notes": "Used to confirm the skill can explain evidence and produce findings."
+}

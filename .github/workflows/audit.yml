@@ -1,0 +1,20 @@
+name: Audit Platform
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm run skills:validate
+      - run: npm run audit:dry-run
+      - run: npm run build

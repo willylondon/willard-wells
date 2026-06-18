@@ -1,0 +1,6 @@
+{
+  "name": "sample-broken-config",
+  "findings": 1,
+  "expectedFindings": 1,
+  "notes": "Used to confirm parser fallback and error handling."
+}
